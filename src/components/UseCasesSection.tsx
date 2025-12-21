@@ -1,10 +1,60 @@
-import { Truck, Scale, Package, CheckSquare, ClipboardCheck, Car, BarChart3 } from 'lucide-react';
+import { Truck, Scale, Package, CheckSquare, ClipboardCheck, Car, BarChart3, Users, ShoppingCart, Factory, Wrench, FileCheck, CreditCard, GitCompare, Blend, Cable } from 'lucide-react';
 
 const useCases = [
   {
+    icon: Users,
+    title: 'Dealer Management',
+    description: 'Complete dealer lifecycle management with order booking, claims, and performance tracking.',
+  },
+  {
+    icon: ShoppingCart,
+    title: 'Procurement Suite',
+    description: 'End-to-end procurement from indent to payment with vendor management and contract tracking.',
+  },
+  {
     icon: Package,
-    title: 'Vendor Portals',
-    description: 'Self-service portals for vendors to manage POs, invoices, and deliveries without SAP access.',
+    title: 'Sales Suite',
+    description: 'Sales order management, pricing, dispatch planning, and customer credit management.',
+  },
+  {
+    icon: ClipboardCheck,
+    title: 'Quality Management',
+    description: 'Quality inspection, testing workflows, and NCR management integrated with SAP QM.',
+  },
+  {
+    icon: Factory,
+    title: 'Production Planning',
+    description: 'Capacity planning, scheduling, and shop floor execution with real-time SAP sync.',
+  },
+  {
+    icon: Wrench,
+    title: 'Plant Maintenance',
+    description: 'Equipment tracking, preventive maintenance, and breakdown management with SAP PM.',
+  },
+  {
+    icon: Blend,
+    title: 'Mixing Process',
+    description: 'Recipe management, batch processing, and quality control for mixing operations.',
+  },
+  {
+    icon: Cable,
+    title: 'Cable Design',
+    description: 'Cable specification, design calculations, and BOM generation integrated with SAP.',
+  },
+  {
+    icon: FileCheck,
+    title: 'PR & PO Approvals',
+    description: 'Multi-level approval workflows for purchase requisitions and orders with mobile access.',
+  },
+  {
+    icon: GitCompare,
+    title: 'Comparative Statements',
+    description: 'Vendor quotation comparison, analysis, and approval workflow automation.',
+  },
+  {
+    icon: CreditCard,
+    title: 'Credit Approvals',
+    description: 'Customer credit limit approvals, risk assessment, and limit management workflows.',
   },
   {
     icon: Scale,
@@ -15,21 +65,6 @@ const useCases = [
     icon: Truck,
     title: 'Logistics Tracking',
     description: 'Real-time shipment visibility with GPS integration and delivery confirmations.',
-  },
-  {
-    icon: CheckSquare,
-    title: 'Approval Workflows',
-    description: 'Multi-level approval workflows for POs, PRs, and payments with mobile access.',
-  },
-  {
-    icon: ClipboardCheck,
-    title: 'QA Systems',
-    description: 'Quality inspection and testing workflows integrated with SAP QM module.',
-  },
-  {
-    icon: Car,
-    title: 'Asset & Fleet',
-    description: 'Plant maintenance extensions for equipment tracking and fleet management.',
   },
   {
     icon: BarChart3,
