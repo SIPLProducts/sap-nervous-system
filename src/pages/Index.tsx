@@ -9,7 +9,6 @@ import DifferentiationSection from '@/components/DifferentiationSection';
 import ComplianceSection from '@/components/ComplianceSection';
 import ROISection from '@/components/ROISection';
 import PilotSection from '@/components/PilotSection';
-import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -26,10 +25,10 @@ const Index = () => {
       <ComplianceSection />
       <ROISection />
       <PilotSection />
-      <ContactSection />
       <Footer />
     </main>
   );
 };
 
 export default Index;
+
