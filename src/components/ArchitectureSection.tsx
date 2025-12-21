@@ -32,7 +32,16 @@ const ArchitectureSection = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {['Vendor Portal', 'Gate Entry', 'Mobile Apps', 'Dashboards'].map((item) => (
+              {[
+                'Dealer Management',
+                'Procurement Suite',
+                'Sales Suite',
+                'Quality Management',
+                'Production Planning',
+                'Plant Maintenance',
+                'Mixing Process',
+                'Cable Design'
+              ].map((item) => (
                 <div key={item} className="px-4 py-2 rounded-lg bg-secondary text-center text-sm text-foreground">
                   {item}
                 </div>
