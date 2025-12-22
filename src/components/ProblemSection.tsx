@@ -1,4 +1,4 @@
-import { AlertTriangle, FileSpreadsheet, Wallet, Smartphone, FileWarning, Settings } from 'lucide-react';
+import { AlertTriangle, FileSpreadsheet, Wallet, Smartphone, FileWarning, Settings, GraduationCap } from 'lucide-react';
 
 const problems = [
   { icon: AlertTriangle, text: 'Heavy SAP screens for external users' },
@@ -7,6 +7,7 @@ const problems = [
   { icon: Wallet, text: 'Inflated license costs' },
   { icon: Smartphone, text: 'Limited mobility' },
   { icon: FileWarning, text: 'Constant audit pressure' },
+  { icon: GraduationCap, text: 'User training challenges' },
 ];
 
 const failures = [

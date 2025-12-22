@@ -9,7 +9,7 @@ const navItems = [
   { id: 'architecture', label: 'Architecture' },
   { id: 'usecases', label: 'Use Cases' },
   { id: 'roi', label: 'ROI' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'pilot', label: 'Pilot' },
 ];
 
 const Navigation = () => {
@@ -54,11 +54,11 @@ const Navigation = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-shrink-0">
           <div className="w-10 h-10 rounded-lg bg-gradient-accent flex items-center justify-center">
             <span className="text-primary-foreground font-heading font-bold text-xl">S</span>
           </div>
-          <span className="font-heading font-semibold text-xl text-foreground">
+          <span className="font-heading font-semibold text-xl text-foreground whitespace-nowrap">
             Sharvi Infotech
           </span>
         </div>

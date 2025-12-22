@@ -185,11 +185,11 @@ const ArchitectureSection = () => {
           </div>
         </div>
 
-        {/* Implementation Methodology */}
+        {/* Animated Deployment Flow */}
         <div className="mt-16">
           <div className="text-center mb-10">
             <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-3">
-              Implementation Methodology
+              Deployment Flow
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Enterprise-grade deployment with proper environment segregation and approval gates.
@@ -197,18 +197,37 @@ const ArchitectureSection = () => {
           </div>
           
           <div className="relative">
-            {/* Connection Line */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-amber-500 to-green-500 -translate-y-1/2 z-0 rounded-full" />
+            {/* Animated Flow Line */}
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 -translate-y-1/2 z-0 rounded-full overflow-hidden bg-border/30">
+              <div className="h-full w-full bg-gradient-to-r from-blue-500 via-amber-500 to-green-500 animate-[flow_3s_linear_infinite]" 
+                   style={{ backgroundSize: '200% 100%' }} />
+            </div>
+            
+            {/* Animated Arrows */}
+            <div className="hidden md:flex absolute top-1/2 left-[30%] -translate-y-1/2 z-20">
+              <div className="flex items-center gap-1 animate-pulse">
+                <div className="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[10px] border-l-blue-400" />
+                <div className="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[10px] border-l-blue-400/60" />
+              </div>
+            </div>
+            <div className="hidden md:flex absolute top-1/2 right-[30%] -translate-y-1/2 z-20">
+              <div className="flex items-center gap-1 animate-pulse" style={{ animationDelay: '0.5s' }}>
+                <div className="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[10px] border-l-amber-400" />
+                <div className="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[10px] border-l-amber-400/60" />
+              </div>
+            </div>
             
             <div className="grid md:grid-cols-3 gap-6 relative z-10">
               {/* DEV */}
-              <div className="glass rounded-2xl p-6 border-2 border-blue-500/30 relative">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-500 text-white text-xs font-bold">
+              <div className="glass rounded-2xl p-6 border-2 border-blue-500/30 relative group hover:border-blue-500/60 transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-500 text-white text-xs font-bold shadow-lg">
                   DEVELOPMENT
                 </div>
+                <div className="absolute top-2 right-2 w-3 h-3 rounded-full bg-blue-500 animate-ping" />
+                <div className="absolute top-2 right-2 w-3 h-3 rounded-full bg-blue-500" />
                 <div className="pt-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4 mx-auto">
-                    <Settings className="w-6 h-6 text-blue-400" />
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <Settings className="w-6 h-6 text-blue-400 group-hover:animate-spin" style={{ animationDuration: '3s' }} />
                   </div>
                   <h4 className="font-heading text-lg font-semibold text-foreground text-center mb-4">DEV Environment</h4>
                   <ul className="space-y-2 text-sm text-muted-foreground">
@@ -230,7 +249,7 @@ const ArchitectureSection = () => {
                     </li>
                   </ul>
                   <div className="mt-4 pt-4 border-t border-border/50">
-                    <div className="flex items-center justify-center gap-2 text-xs text-blue-400">
+                    <div className="flex items-center justify-center gap-2 text-xs text-blue-400 font-medium">
                       <Lock className="w-3 h-3" />
                       Developer Approval
                     </div>
@@ -239,12 +258,14 @@ const ArchitectureSection = () => {
               </div>
 
               {/* QAS */}
-              <div className="glass rounded-2xl p-6 border-2 border-amber-500/30 relative">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-amber-500 text-white text-xs font-bold">
+              <div className="glass rounded-2xl p-6 border-2 border-amber-500/30 relative group hover:border-amber-500/60 transition-all duration-500 hover:shadow-[0_0_30px_rgba(245,158,11,0.3)]">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-amber-500 text-white text-xs font-bold shadow-lg">
                   QUALITY ASSURANCE
                 </div>
+                <div className="absolute top-2 right-2 w-3 h-3 rounded-full bg-amber-500 animate-ping" style={{ animationDelay: '0.3s' }} />
+                <div className="absolute top-2 right-2 w-3 h-3 rounded-full bg-amber-500" />
                 <div className="pt-4">
-                  <div className="w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center mb-4 mx-auto">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     <TestTube className="w-6 h-6 text-amber-400" />
                   </div>
                   <h4 className="font-heading text-lg font-semibold text-foreground text-center mb-4">QAS Environment</h4>
@@ -267,7 +288,7 @@ const ArchitectureSection = () => {
                     </li>
                   </ul>
                   <div className="mt-4 pt-4 border-t border-border/50">
-                    <div className="flex items-center justify-center gap-2 text-xs text-amber-400">
+                    <div className="flex items-center justify-center gap-2 text-xs text-amber-400 font-medium">
                       <UserCheck className="w-3 h-3" />
                       Business + IT Approval
                     </div>
@@ -276,12 +297,14 @@ const ArchitectureSection = () => {
               </div>
 
               {/* PRD */}
-              <div className="glass rounded-2xl p-6 border-2 border-green-500/30 relative">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-green-500 text-white text-xs font-bold">
+              <div className="glass rounded-2xl p-6 border-2 border-green-500/30 relative group hover:border-green-500/60 transition-all duration-500 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)]">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-green-500 text-white text-xs font-bold shadow-lg">
                   PRODUCTION
                 </div>
+                <div className="absolute top-2 right-2 w-3 h-3 rounded-full bg-green-500 animate-ping" style={{ animationDelay: '0.6s' }} />
+                <div className="absolute top-2 right-2 w-3 h-3 rounded-full bg-green-500" />
                 <div className="pt-4">
-                  <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-4 mx-auto">
+                  <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     <Rocket className="w-6 h-6 text-green-400" />
                   </div>
                   <h4 className="font-heading text-lg font-semibold text-foreground text-center mb-4">PRD Environment</h4>
@@ -304,7 +327,7 @@ const ArchitectureSection = () => {
                     </li>
                   </ul>
                   <div className="mt-4 pt-4 border-t border-border/50">
-                    <div className="flex items-center justify-center gap-2 text-xs text-green-400">
+                    <div className="flex items-center justify-center gap-2 text-xs text-green-400 font-medium">
                       <Shield className="w-3 h-3" />
                       Management Sign-Off
                     </div>
