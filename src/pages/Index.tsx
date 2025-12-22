@@ -10,21 +10,40 @@ import ComplianceSection from '@/components/ComplianceSection';
 import ROISection from '@/components/ROISection';
 import PilotSection from '@/components/PilotSection';
 import Footer from '@/components/Footer';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      <SummarySection />
-      <ProblemSection />
-      <SolutionSection />
-      <ArchitectureSection />
-      <UseCasesSection />
-      <DifferentiationSection />
-      <ComplianceSection />
-      <ROISection />
-      <PilotSection />
+      <ScrollReveal>
+        <SummarySection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <ProblemSection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <SolutionSection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <ArchitectureSection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <UseCasesSection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <DifferentiationSection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <ComplianceSection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <ROISection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <PilotSection />
+      </ScrollReveal>
       <Footer />
     </main>
   );
