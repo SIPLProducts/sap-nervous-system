@@ -1,4 +1,5 @@
-import { ArrowDown, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import ScrollDownArrow from './ScrollDownArrow';
 
 const HeroSection = () => {
   return (
@@ -39,10 +40,9 @@ const HeroSection = () => {
             className="group px-8 py-4 bg-gradient-accent text-primary-foreground font-semibold rounded-xl shadow-button hover:shadow-glow transition-all duration-300 flex items-center gap-2"
           >
             Explore Our Approach
-            <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
           </a>
           <a
-            href="#contact"
+            href="#pilot"
             className="px-8 py-4 glass text-foreground font-semibold rounded-xl hover:bg-secondary transition-all duration-300"
           >
             Start a Pilot
@@ -63,6 +63,8 @@ const HeroSection = () => {
           ))}
         </div>
       </div>
+
+      <ScrollDownArrow targetId="summary" />
     </section>
   );
 };
