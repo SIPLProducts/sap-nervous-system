@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import PDFExportButton from './PDFExportButton';
+import ThemeToggle from './ThemeToggle';
 import sharviLogo from '@/assets/sharvi-logo.png';
 
 const navItems = [
@@ -75,6 +76,7 @@ const Navigation = () => {
               {item.label}
             </button>
           ))}
+          <ThemeToggle />
           <PDFExportButton />
         </div>
 
