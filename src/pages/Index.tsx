@@ -9,6 +9,7 @@ import DifferentiationSection from '@/components/DifferentiationSection';
 import ComplianceSection from '@/components/ComplianceSection';
 import ROISection from '@/components/ROISection';
 import DigitalLicenseSection from '@/components/DigitalLicenseSection';
+import DigitalLicenseCalculator from '@/components/DigitalLicenseCalculator';
 import LicenseOptimizationSection from '@/components/LicenseOptimizationSection';
 import BusinessImpactSection from '@/components/BusinessImpactSection';
 import PilotSection from '@/components/PilotSection';
@@ -46,6 +47,9 @@ const Index = () => {
       </ScrollReveal>
       <ScrollReveal delay={100}>
         <DigitalLicenseSection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <DigitalLicenseCalculator />
       </ScrollReveal>
       <ScrollReveal delay={100}>
         <LicenseOptimizationSection />
